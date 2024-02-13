@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% load django_bootstrap5 %}
+{% load static %}
+{% block body %}
+
+
+{% if form %}
+
+
+<div class="d-flex justify-content-center">
+    <form enctype="multipart/form-data" method="POST">
+        <h2 class="text-center">Prediction Form</h2>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <input class="btn btn-info" type="submit" value="submit">
+    </form>
+</div>
+{% else %}
+<div>
+    <h2 class="text-center">Predicted Disease for the Given image is {{disease_type}}</h2>
+    <h2 class="text-center">Recommandaion for The {{disease_type}} is {{recommendation}}</h2>
+
+</div>
+
+
+{% endif %}
+
+{% endblock %}

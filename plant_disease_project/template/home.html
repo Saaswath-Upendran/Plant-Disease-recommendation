@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block body %}
+<style>
+
+    body {
+        background-image: url("{% static 'copertina-1.jpg' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<div class="text-center">
+    <h1>Plant Disease Recommandaion Using Vision Transformer</h1>
+</div>
+
+{% endblock %}
